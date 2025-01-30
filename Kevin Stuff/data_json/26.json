@@ -1,32 +1,47 @@
 {
-    "case_number": "0202/01",
-    "case_title": "Report into the Allegation that an Economic Commission of Africa (ECA) Staff Member Misappropriated Money Intended as Daily Subsistence Allowance (DSA) for Some Participants Attending a Conference in Seychelles",
+    "case_number": "0192/04",
+    "case_title": "Allegation of fraud in handling and accounting of Cargo at Pristina Airport",
     "case_details": {
         "introduction": [
-            "The Investigations Division, Office of Internal Oversight Services (ID/OIOS) received a complaint that an Economic Commission of Africa (ECA) staff member misappropriated the sum of US$12,000 that was intended as Daily Subsistence Allowance (DSA) for five participants attending a conference in Seychelles."
+            "The Investigation Task Force (ITF) received a report that the Cargo Department at Pristina Airport had improperly sought payment for importation and storage of goods owned by the Company. It was further alleged that an amount of \u20ac8,000.00 was sought and received by an official (Official 1) of the Pristina Airport, which was illegal and therefore not recorded in the accounts of the Airport.",
+            "After the ITF conducted a preliminary investigation into this allegation, prima facie evidence of a crime was identified and the case was referred to the Department of Justice, Pillar I, UNMIK, on July 22nd, 2004 for further judicial action. This report is a summary of the information adduced during the investigation."
         ],
         "applicable_laws_and_procedural_rules": [
-            "Staff Regulation 1.2 (g): Staff members shall not use their office or knowledge gained from their official functions for private gain, financial or otherwise, or for the private gain of any third party, including family, friends and those they favour.",
-            "Financial Rule 104.9 (ST/SGB/2003/7): Officials to whom cash advances are issued shall be held personally accountable and financially liable for the proper management and safekeeping of cash so advanced and must be in a position to account for these advances at all times.",
-            "Financial Rule 104.10 (ST/SGB/2003/7): Disbursements shall be recorded in the accounts as at the date on which they are made."
+            "Article 215, (1) and (2) of the Kosovo Criminal Code (KCC)",
+            "Article 341 (1) and (2) of Provisional Kosovo Criminal Code (PCCK)",
+            "Article 22 of Criminal Code of SFRY",
+            "Article 219 para. 1 and 3 of the KCC",
+            "Article 340, (1) and (3) of the PCCK",
+            "Article 339 para. 1 and 3 of PCCK",
+            "Article 210 (1) and (3) of the PCCK"
         ],
-        "methodology": [
-            "ID/OIOS interviewed the ACGD Officer, ECA\u2019s Official 1, and other staff members. Investigators also obtained and analyzed documents including personnel records, bank records and the list of participants for the Seychelles conference indicating who was paid DSA."
-        ],
+        "methodology": [],
         "background_information": [
-            "ID/OIOS determined that the conference in question was 'An Eastern and Southern Africa Sub Regional Meeting' and was held from 15 to 18 February, 1999 at the Berjaja Mahe Beach Resort Hotel in Victoria, Seychelles.",
-            "This conference attracted over 100 participants, 46 of whom were sponsored by ECA."
+            "ITF Investigators met with the Company Representative, who explained that a part of his business involves the importation and marketing of LED display equipment. The Company consists of 4 partners: Partner 1, Partner 2, Partner 3, Partner 4.",
+            "The above company partners agreed to the following regarding the various payments to be effected: Partner 2 and Partner 3 were to pay the total price of all the goods; Partner 1 was to pay everything regarding VAT, Custom Duties, Local Taxes and Storage."
         ],
         "investigation_details": [
-            "In an inter-office memorandum dated 19 January 2000, Official 3 asked the ACGD Officer to settle relevant claims and to provide supporting documentation for the US$49,000 the ACGD Officer had received for payment of DSA and other miscellaneous expenses at the conference.",
-            "ID/OIOS Investigators observed that of the five PT.8 reference numbers referred to by Official 4 in his memorandum of 17 February 2000, one was repeated and another PT.8 had in fact not been cancelled, leaving three rather than five apparently inappropriately disbursed DSA payments in the amount of US$3,011."
+            "A consignment of 'LED Display equipment and accessories' for the Company arrived at the airport via Airline 1 on 26 December 2003, and consisted of four pallets containing 27 packages with a total weight of 976 kg. These goods were imported from Beirut and were accompanied by an Air Waybill.",
+            "The Company Representative was advised by Partner 2 of the consignment\u2019s arrival. Partner 2 was also the person that handed over the Air Waybill to the Company Representative.",
+            "At the time the consignment arrived in Kosovo, the Company did not have permission to erect the LED screen on any city building for advertisement purposes as they had intended. This authorization was granted sometime later, circa March/April 2004.",
+            "The merchandise in question was paid for and cleared on the 15th of March 2004, by the nominated Shipping Agent. The same Agent, on behalf of the Company, paid a total amount of \u20ac11,581.00, VAT and Customs Duties included.",
+            "Once all the payments had been effected, the Company Representative went to the Cargo Building to pick up his goods, but according to his statements, he/she was approached by Official 1, who advised the Company Representative that he/she was now required to pay the amount of \u20ac32,800.00 that included a storage charge for the period 26 December 2003 to 15 March 2004.",
+            "Partner 2 was astonished at this excessive charge for storage. At this point, the Company management agreed to leave the goods in storage and decide on what action to take. They identified the possibility of returning the goods to their place of origin, due to the fact that the storage would have cost them nearly as much as the price of the screen (US$54,000.00).",
+            "Official 1 then advised the Company Representative that he would do everything in his/her power to assist in settling this situation, including an offer to lower the storage charge. Sometime thereafter, Official 1 advised the Company Representative that he/she was able to decrease the storage charge to \u20ac8,000.00 based on his/her position and connections at the Airport.",
+            "The Company management accepted the new offer and agreed to pay the lower storage charge of \u20ac8,000.00. However, due to the fact that Partner 1 did not have \u20ac8,000.00 in cash, he/she commenced a search amongst his/her friends for the money. Subsequently, Partner 1 was able to raise the money to pay both the Custom Excise and Airport Storage fees.",
+            "On the 16th of March 2004, Partner 1 paid the \u20ac8,000.00 to the Company Representative, who then went to Pristina Airport to hand it to Official 1. The Company Representative stated that the hand-over of the cash to Official 1 took place outside the airport terminal gate. The Airport X-Ray Operator, who observed the meeting between the two men, corroborated the fact that the meeting took place as stated.",
+            "ITF Investigators visited the Cargo Department Finance Office to check official documentation in relation to the Company merchandise. No trace of the payment of the \u20ac8,000 could be found in the Cargo Department account books for 2003 or 2004.",
+            "According to the tariff list that the Finance Officer of the Cargo Section provided to the ITF, the Company should have paid an amount of approximately \u20ac32,000.00 for storage fees from the 23rd of December 2003 to 15th of March 2004.",
+            "In view of the above, ITF Investigators interviewed Official 2 who offered no justifiable explanation as to why no payment had been effected with respect to the Company goods. He/she simply repeated that the goods were confiscated from the Customs Service and that just a minor payment of storage fees should have occurred. Unfortunately, no trace of payment (current official storage price list payment or the minor payment that Official 2 declared in his/her official interview) was detected by the ITF nor provided by Official 2. Further inquiries carried out by the ITF on 6 July 2004 at Pristina Airport Customs Offices and at Pristina Customs Services Headquarters, disclosed that the merchandise did indeed enter the airport storage on 26 December 2003 and left on 15 March 2004. According to two staff members, the Company merchandise was not confiscated based on a request from Customs. The ITF found that the Company paid a total amount of \u20ac11,581.00 for VAT and Customs Duties.",
+            "On July 12th 2004, ITF Investigators interviewed Partner 4 confirmed that the first requested amount was \u20ac32,000.00, which was later changed to the agreed sum of \u20ac8,000.00. He/she added that he/she received a strange phone call from a staff member of Airline 2 Pristina Office on 9 July 2004, advising him/her to urgently make contact with Official 2 on his/her mobile telephone, because Official 2 urgently needed to speak with Partner 4. According to Partner 4\u2019s statement, he/she called Official 2, who asked for an appointment in order to discuss 'a certain issue'. Partner 4 said he/she replied that there was no need to continue this conversation, as he/she knew that Official 2 was trying to influence any statements by Partner 4 that he/she may provide to any future inquiries from an investigative body. Partner 4 stated to the ITF that he/she advised the staff member of Airline 2 of his already scheduled appointment with ITF Investigators on the following Monday and that he/she was prepared to tell all he knew on the matter. In view of all the collected data and evidence, the ITF decided to refer the case to the Department of Justice."
         ],
         "conclusions": [
-            "The signatures for three people on the attendance list, who did not attend the conference, were forged and the disbursements to them unaccounted for, resulting in a loss of US$3,011 to ECA."
+            "Given that the judicial process is ongoing and now rests with the Department of Justice, it is highly recommended that the information contained in this report be carefully protected from inappropriate disclosure. The two Pristina Airport staff members are under suspension and awaiting trial. Therefore, this information is to be treated as highly confidential and should not be disseminated to any other party without the consent of the competent Judicial Authorities."
         ],
         "recommendations": [
-            "It is recommended that appropriate action be taken against the ACGD Officer, including for being in breach of Financial Rule 104.9 and 104.10 (b) and (c).",
-            "It is recommended that ECA management review its cash disbursement practices for additional gaps and examine this case for lessons learned to avoid similar problems in future."
+            "The ITF recommends that UNMIK Pillar IV take no administrative action against Official 1 and Official 2 pending the resolution of their respective cases by the Department of Justice (IV04/192/01).",
+            "The ITF recommends that UNMIK Pillar IV take appropriate disciplinary action against Official 1 if he/she is not criminally charged or sentenced by the competent authorities (IV04/192/02).",
+            "The ITF recommends that UNMIK Pillar IV take appropriate disciplinary action against Official 2 if he/she is not criminally charged or sentenced by the competent authorities (IV04/192/03)."
         ],
         "others": []
     }
