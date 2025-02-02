@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "285/04", "label": "285/04", "shape": "dot", "title": "Pristina Airport \u2013 Possible administrative irregularity regarding tender procedures involving Vendor 1 and Vendor 2"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0275/04", "label": "0275/04", "shape": "dot", "title": "Irregularities in the procurement and contract award for Winter and Summer Uniforms at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0276/04", "label": "0276/04", "shape": "dot", "title": "Alleged irregularities in a contract for the construction of garages and a parking area for Air Traffic Control Services at Pristina Airport and in an annex agreement for the supply of new offices, training room and maintenance garage for the Rescue Fire Fighting Service"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0280/04", "label": "0280/04", "shape": "dot", "title": "Investigation into allegations of irregularities in two tender processes for the supply of cleaning machines to Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0281/04", "label": "0281/04", "shape": "dot", "title": "Irregularities in the addition of a single source contract one month after the award of a contract for the supply of two new containers and the dismantling, transport and re-construction of a further seven containers at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0282/04", "label": "0282/04", "shape": "dot", "title": "Irregularities in the procurement for the extension of the Cargo Apron at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0283/04", "label": "0283/04", "shape": "dot", "title": "Allegations of theft and corruption arising out of the collection of handling and landing fees and de-icing costs for passenger aircraft using Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "377/04", "label": "377/04", "shape": "dot", "title": "Allegations of Bribes/Kickbacks for Employment at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ITF Case No. 0462/04", "label": "ITF Case No. 0462/04", "shape": "dot", "title": "Investigation into Allegations of Bribery and Favouritism in Procurement of Uniforms by Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ITF Case \u2116 0261/04", "label": "ITF Case \u2116 0261/04", "shape": "dot", "title": "Alleged Fraud \u2013 Pristina Airport Cargo Department"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0374/04", "label": "0374/04", "shape": "dot", "title": "Investigation into Alleged Irregularities in the Procurement of Personal Digital Assistants"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0580/03", "label": "0580/03", "shape": "dot", "title": "Report of Investigation into Cheque Fraud"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0570/03", "label": "0570/03", "shape": "dot", "title": "Report into Seeking Assistance from Persons External to the Organization"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0202/01", "label": "0202/01", "shape": "dot", "title": "Report into the Allegation that an Economic Commission of Africa (ECA) Staff Member Misappropriated Money Intended as Daily Subsistence Allowance (DSA) for Some Participants Attending a Conference in Seychelles"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0374103", "label": "0374103", "shape": "dot", "title": "Allegations of misconduct occurring in the Post-Conflict Assessment Unit (PCAU) of the United Nations Environmental Programme (UNEP)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "02 16/04", "label": "02 16/04", "shape": "dot", "title": "Alleged Violations of Procurement Procedures - Insurance (No. 0216104)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "050/04", "label": "050/04", "shape": "dot", "title": "Alleged misappropriation of funds \u2013 Manager"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0278/04", "label": "0278/04", "shape": "dot", "title": "Pristina Airport - Alleged administrative irregularity regarding an FIDS Tender"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "287/04", "label": "287/04", "shape": "dot", "title": "Pristina Airport \u2013 Alleged administrative irregularity regarding an X-RAY Tender"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ITF CASE NO. 0262/04", "label": "ITF CASE NO. 0262/04", "shape": "dot", "title": "REPORT ON ALLEGATIONS OF EVASION OF PRISTINA AIRPORT CHARGES"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0218/04", "label": "0218/04", "shape": "dot", "title": "Allegation of Possible Bribery at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0192/04", "label": "0192/04", "shape": "dot", "title": "Allegation of fraud in handling and accounting of Cargo at Pristina Airport"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0221/04", "label": "0221/04", "shape": "dot", "title": "Alleged Irregularities Related to an UNMIK Bank Account 1110019243020132-1"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0093/04", "label": "0093/04", "shape": "dot", "title": "ALLEGATIONS OF CONFLICT OF INTEREST AND ABUSE OF AUTHORITY BY SENIOR OFFICIAL 1, UNMIL"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0425/04", "label": "0425/04", "shape": "dot", "title": "ALLEGATIONS OF MISMANAGEMENT AND WASTE OF RESOURCES BY THE OFFICER OF THE UNMIL FUEL CELL"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0050/05", "label": "0050/05", "shape": "dot", "title": "Report of Investigation \u2013 ID Case 0050/05"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0575/03", "label": "0575/03", "shape": "dot", "title": "Investigation into the allegation that a UNON/ITS staff member obtained money from UNPOS"}]);
+                  edges = new vis.DataSet([{"from": "285/04", "title": "Similarity: 0.95", "to": "0275/04", "value": 0.9546011686325073}, {"from": "285/04", "title": "Similarity: 0.96", "to": "0280/04", "value": 0.9612274765968323}, {"from": "285/04", "title": "Similarity: 0.96", "to": "0278/04", "value": 0.9611049294471741}, {"from": "0275/04", "title": "Similarity: 0.97", "to": "0276/04", "value": 0.970894992351532}, {"from": "0275/04", "title": "Similarity: 0.98", "to": "0280/04", "value": 0.9762760400772095}, {"from": "0275/04", "title": "Similarity: 0.96", "to": "0281/04", "value": 0.9587839841842651}, {"from": "0275/04", "title": "Similarity: 0.98", "to": "0282/04", "value": 0.9761745929718018}, {"from": "0275/04", "title": "Similarity: 0.96", "to": "0278/04", "value": 0.9622899293899536}, {"from": "0275/04", "title": "Similarity: 0.97", "to": "0192/04", "value": 0.967503547668457}, {"from": "0275/04", "title": "Similarity: 0.95", "to": "0050/05", "value": 0.9516189694404602}, {"from": "0276/04", "title": "Similarity: 0.98", "to": "0280/04", "value": 0.977716326713562}, {"from": "0276/04", "title": "Similarity: 0.98", "to": "0281/04", "value": 0.9752295017242432}, {"from": "0276/04", "title": "Similarity: 0.98", "to": "0282/04", "value": 0.98011314868927}, {"from": "0276/04", "title": "Similarity: 0.96", "to": "0283/04", "value": 0.9626491665840149}, {"from": "0276/04", "title": "Similarity: 0.95", "to": "0374/04", "value": 0.9527676701545715}, {"from": "0276/04", "title": "Similarity: 0.95", "to": "02 16/04", "value": 0.951176643371582}, {"from": "0276/04", "title": "Similarity: 0.95", "to": "0278/04", "value": 0.953304648399353}, {"from": "0276/04", "title": "Similarity: 0.96", "to": "287/04", "value": 0.955705463886261}, {"from": "0276/04", "title": "Similarity: 0.96", "to": "0192/04", "value": 0.9594117999076843}, {"from": "0280/04", "title": "Similarity: 0.97", "to": "0281/04", "value": 0.9675347805023193}, {"from": "0280/04", "title": "Similarity: 0.99", "to": "0282/04", "value": 0.9897226095199585}, {"from": "0280/04", "title": "Similarity: 0.96", "to": "0283/04", "value": 0.9557408094406128}, {"from": "0280/04", "title": "Similarity: 0.95", "to": "ITF Case No. 0462/04", "value": 0.9522261023521423}, {"from": "0280/04", "title": "Similarity: 0.96", "to": "0374/04", "value": 0.9606497883796692}, {"from": "0280/04", "title": "Similarity: 0.95", "to": "02 16/04", "value": 0.952594518661499}, {"from": "0280/04", "title": "Similarity: 1.00", "to": "0280/04", "value": 0.9999975562095642}, {"from": "0280/04", "title": "Similarity: 0.97", "to": "0278/04", "value": 0.9666582345962524}, {"from": "0280/04", "title": "Similarity: 0.95", "to": "287/04", "value": 0.952846884727478}, {"from": "0280/04", "title": "Similarity: 0.96", "to": "0192/04", "value": 0.9572232365608215}, {"from": "0280/04", "title": "Similarity: 0.96", "to": "0575/03", "value": 0.9584022760391235}, {"from": "0281/04", "title": "Similarity: 0.97", "to": "0282/04", "value": 0.9691053032875061}, {"from": "0281/04", "title": "Similarity: 0.96", "to": "0283/04", "value": 0.9595333933830261}, {"from": "0282/04", "title": "Similarity: 0.95", "to": "0283/04", "value": 0.9518793821334839}, {"from": "0282/04", "title": "Similarity: 0.96", "to": "0374/04", "value": 0.9619412422180176}, {"from": "0282/04", "title": "Similarity: 0.95", "to": "02 16/04", "value": 0.9504603743553162}, {"from": "0282/04", "title": "Similarity: 1.00", "to": "0282/04", "value": 1.0}, {"from": "0282/04", "title": "Similarity: 0.96", "to": "0278/04", "value": 0.9567444324493408}, {"from": "0282/04", "title": "Similarity: 0.95", "to": "0192/04", "value": 0.9524128437042236}, {"from": "0282/04", "title": "Similarity: 0.95", "to": "0050/05", "value": 0.9511556625366211}, {"from": "0282/04", "title": "Similarity: 0.95", "to": "0575/03", "value": 0.9541621804237366}, {"from": "0283/04", "title": "Similarity: 0.95", "to": "ITF Case \u2116 0261/04", "value": 0.9538083672523499}, {"from": "0283/04", "title": "Similarity: 1.00", "to": "0283/04", "value": 1.0}, {"from": "0283/04", "title": "Similarity: 0.97", "to": "ITF CASE NO. 0262/04", "value": 0.9720262289047241}, {"from": "0283/04", "title": "Similarity: 0.95", "to": "0192/04", "value": 0.9538850784301758}, {"from": "ITF Case No. 0462/04", "title": "Similarity: 1.00", "to": "ITF Case No. 0462/04", "value": 1.0}, {"from": "ITF Case \u2116 0261/04", "title": "Similarity: 0.96", "to": "ITF CASE NO. 0262/04", "value": 0.9572958946228027}, {"from": "0580/03", "title": "Similarity: 0.96", "to": "0050/05", "value": 0.9589563012123108}, {"from": "0202/01", "title": "Similarity: 0.95", "to": "0221/04", "value": 0.9500851631164551}, {"from": "0202/01", "title": "Similarity: 0.96", "to": "0050/05", "value": 0.9628618955612183}, {"from": "0202/01", "title": "Similarity: 0.95", "to": "0575/03", "value": 0.9519609212875366}, {"from": "02 16/04", "title": "Similarity: 0.96", "to": "050/04", "value": 0.9554311633110046}, {"from": "0218/04", "title": "Similarity: 0.96", "to": "0192/04", "value": 0.9585153460502625}, {"from": "0192/04", "title": "Similarity: 0.95", "to": "0425/04", "value": 0.9515565633773804}, {"from": "0425/04", "title": "Similarity: 0.95", "to": "0050/05", "value": 0.9521088600158691}, {"from": "0050/05", "title": "Similarity: 0.96", "to": "0575/03", "value": 0.9608134627342224}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
